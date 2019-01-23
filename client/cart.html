@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Cart OrzacDesign</title>
+
+	<!--Fontawesome Stylesheet-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+	<!--Font Style Stylesheet-->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="http://localhost:4002/css/cart.css">
+	
+</head>
+<body>
+	<!-- Cart -->
+	<div id="cart" class="cart-bottom">
+		<div id="cartList" class="cart-list">
+			<div class="list">
+				<div class="cart-items">
+					<div>Descriere</div>
+					<div class="color-list">Culoare</div>
+					<div>QTY</div>
+					<div>Preț</div>
+				</div>
+				<ul id="itemsCart">	</ul>
+			</div>
+			<div class="total">
+				<div class="totalT">Total:</div>
+				<div class="totalP" id="cartTotal"></div>
+			</div>
+			<div class="checkout">
+				<button class="cancel" id="CancelCart">Cancel</button>
+				<button class="checkout" id="checkoutButton">Finalizare</button>
+				<button class="remove" id ="removeItems">Șterge</button>
+			</div>
+		</div>
+	</div> <!-- End Cart Section -->
+
+
+	<!--Jquery Script-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!--My Script-->
+	<script type="text/javascript" src="http://localhost:4002/code/cart.js"></script>
+
+</body>
+</html>

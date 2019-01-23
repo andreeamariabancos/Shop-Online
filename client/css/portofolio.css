@@ -1,0 +1,96 @@
+@import url("variables.css");
+
+.details-page-header {
+	position: relative;
+	height: 270px;
+	background-image:linear-gradient(rgba(0,0,0, 0.7),rgba(0,0,0, 0.7)), url("../img/header-products.jpg");
+	background-attachment: fixed;
+}
+
+.title-project {
+	font-family: 'Garamond', serif;
+}
+
+.portofolio {
+	float: left;
+	display: table;
+	width: 100%;
+	min-height: 300px;
+	background-image: url();
+	background-size: cover;
+	transition: width .4s;
+}
+
+.wrp {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.image-project {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	width: 99%;
+	height: 99%;
+	object-fit: cover;
+}
+
+.pop-up-project {
+	display: inline-block;
+	padding: 40px 20px;
+	width: 60%;
+	height: 60%;
+	opacity: 0;
+	visibility: hidden;
+	background-color: var(--pop-up);
+	outline: 7px solid rgba(216, 195, 195, 0.5);
+	transition: opacity .4s;
+	will-change: opacity, visibility;
+}
+
+.portofolio:hover article {
+	opacity: 1;
+	visibility: visible;
+}
+
+.pop-up-project date {
+	font-size: .8rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: var(--date);
+}
+
+.pop-up-project h2 {
+	margin-bottom: 10px;
+	font-weight: 300;
+	font-style: italic;
+}
+
+@media screen and (min-width: 600px) {
+	.portofolio {
+		width: 50%;
+	}
+
+	.portofolio-container {
+	    height: 1500px;
+	    margin: 0 auto;
+	    padding: 50px;
+	}
+}
+
+
+@media screen and (min-width: 1024px) {
+	.portofolio {
+		width: 33%;
+	}
+
+	.portofolio-container {
+		height: 900px;
+	    margin: 0 auto;
+	    padding: 50px;
+	}
+
+}

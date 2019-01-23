@@ -1,0 +1,65 @@
+:root {
+
+	/**** Most Used Color ****/
+
+	--bg-color: #f7f4f4;
+	--white: #fff;
+	--blackLight: #000008;
+	--orange: #FF851B;
+	--shadow :rgba(0, 0, 0, 0.2);
+	--gray: #9a9a9a;
+
+
+
+	/**** Nav Specific Color ****/
+
+	--cartIcon: #616161;
+	--iconBg: #535558;
+	--hoverNav: #BF9F9B;
+	--activeNav: #b25d5d;
+
+	/**** Home Specific Color ****/
+
+	--lightButton:#2f3030;
+	--blueService:#0864a1;
+
+
+	/**** Product Specific Color ****/
+
+	--pointer:#fff9f9;
+	--borderProd: #dfd8d4;
+
+	/**** Details Specific Color ****/
+
+	--black:#000;
+	--brown:#b48154;
+	--grey:#999596;
+	--border:#e1e1e1;
+
+	/**** Cart Specific Color ****/
+
+	--buttonCart:#730000;
+	--textColor: #333;
+	--removeX : #e0e0e0;
+
+	/**** Contact Specific Color ****/
+
+	--borderContact: #d9d9d9;
+
+	/**** Portofolio Specific Color ****/
+
+	--pop-up: rgb(247, 244, 244);
+	--date: #666;
+
+
+	/**** Login Specific Color ****/
+
+	--title : #e5dfdfdb;
+	--textShadow: rgb(44, 43, 43);
+	--inputBg: rgba(65, 51, 51, 0.45);
+	--borderInput: rgba(255, 255, 255, 0);
+	--transparent: #fefefede;
+	--login: rgba(34, 31, 31, 0.63);
+	--account: #eee;
+
+}

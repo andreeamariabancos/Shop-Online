@@ -1,0 +1,68 @@
+@import url("variables.css");
+
+.container-products-page {
+    position: relative;
+    min-height: 100vh;
+}
+
+.product-page-header {
+    position: relative;
+    height: 270px;
+    background-image:linear-gradient(rgba(0,0,0, 0.7),rgba(0,0,0, 0.7)), url("../img/contact/contact.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.breadcrumbs {
+    padding-bottom: 45px;
+    padding-top: 55px;
+    text-align: center;
+    font-weight: 400;
+    font-family: Quicksand;
+    font-weight: 500;
+}
+
+.text-center.padding-top70 {
+    font-size: 15px;
+}
+
+.contact-box-wrapper {
+    border: 1px solid var(--borderContact);
+    padding: 50px;
+}
+
+.fa {
+    font-size: 42px;
+}
+
+.contact-box-wrapper .icon {
+    color: var(--orange);
+    font-size: 30px;
+    line-height: 1;
+}
+
+.breadcrumbs {
+    padding-bottom: 45px;
+    padding-top: 55px;
+}
+
+.page-header span {
+    display: inline;
+    font-size: 38px;
+    margin-bottom: 15px;
+    padding-bottom: 9px;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(to right, #FF851B 0%, #121214 89%);
+    border-image-slice: 1;
+    font-family: Quicksand;
+}
+
+.text-center.padding-top70 {
+    margin-top: 20px;
+}
+
+@media (min-width: 1200px){
+    .container {
+        margin-top: 50px;
+    }
+}

@@ -1,0 +1,79 @@
+@import url("variables.css");
+
+footer {
+	background-color: #000;
+	height: auto;
+	color: #666666;
+	padding: 15px 1.5625%;
+}
+@media (max-width: 799px) {
+	footer {
+		font-size: 12px;
+	}
+}
+footer .social-buttons {
+	float: left;
+}
+footer p {
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+footer:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+footer .footer-row {
+	display: flex;
+	font-family: Quicksand;
+}
+
+footer .title-category-footer strong {
+	margin-bottom: 15px;
+	padding-bottom: 9px;
+	border-bottom: 3px solid transparent;
+	border-image: linear-gradient(to right, #FF851B 0%, #121214 89%);
+	border-image-slice: 1;
+	color: var(--white);
+}
+
+footer .list-category-container {
+	margin-top: 25px;
+}
+
+footer .list-footer {
+	margin-left:20px;
+}
+
+footer .list-footer li {
+	list-style-type: square;
+	margin-bottom: 5px;
+	color: var(--orange);
+}
+
+footer .list-footer li a {
+	color: var(--bg-color);
+	font-family: Quicksand;
+	font-size: 15px;
+}
+
+footer .content-footer {
+	display: inline-block;
+	margin: 0 auto;
+}
+.fa-facebook-square {
+	margin-right: 10px;
+}
+
+.fa-facebook-square:before {
+	content: "\f082";
+	font-family: unset;
+	
+}
+.fa-instagram:before {
+	content: "\f16d";
+	font-family: unset;
+	margin-right: 10px;
+}

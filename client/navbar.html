@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NavigationBar OrzacDesign</title>
+	
+	<!--Fontawesome Stylesheet-->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+	<!--Font Style Stylesheet-->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+	<!--My Stylesheet-->
+	<link rel="stylesheet" type="text/css" href="http://localhost:4002/css/navigation.css">
+
+</head>
+<body>
+	<!--Navigation bar-->
+	<div class="navbar" id="navbarSection">
+		<div class="nav" id="responsiveNav">
+
+			<div class="responsive-media">
+				<div href="#" id="cartIcon" class="cart-icon">
+					<span class="couter-cart" id="itemCount"></span>
+				</div>
+			</div>
+			
+			<div class="leftgroup-bar">
+				<a href="/">Acasă</a>
+				<a href="/products">Magazin</a>
+				<a href="/portofolio">Portofoliu</a>
+				<a href="/contact">Contact</a>
+
+				<div class="dropdown">
+				  <i class="fa fa-user"><span class="user-connected" id="result"></span></i>
+				  <div class="dropdown-content">
+				    <a href="/signup">Crează cont</a>
+				    <a href="/login">Înregistrare</a>
+				    <a id="logOut" href="#">Deconectare</a>
+				  </div>
+				</div>
+				
+			</div>
+			<a class="icon-nav" >
+				<i class="fas fa-bars"></i>
+			</a>
+		</div>		
+	</div><!-- End Navigation bar-->
+
+	<!--Jquery Script-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!--My Script-->
+	<script type="text/javascript" src="http://localhost:4002/code/responsive-header.js"></script>
+	<script type="text/javascript" src="http://localhost:4002/code/register.js"></script>
+
+
+</body>
+</html>

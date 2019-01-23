@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout OrzacDesign</title>
+
+  <!--Fontawesome Stylesheet-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+  <!--Font Style Stylesheet-->
+  <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+  <!--My Stylesheet-->
+  <link rel="stylesheet" type="text/css" href="http://localhost:4002/css/main.css">
+  <link rel="stylesheet" type="text/css" href="http://localhost:4002/css/checkout.css">
+
+</head>
+<body>
+
+  <!-- Header Section-->
+  <header class="product-page-header">  
+    <!--Navigation bar-->
+    <div id="navbarSection"></div>
+  </header> <!--End Header Section-->
+
+  <div class="site-container">
+
+    <div class="checkout-container">
+      <div class="header-ch ch-completed">
+        <div class="form-section">
+          <h1>Finalizare Comandă</h1>
+        </div>
+      </div>
+
+      <!-- Order Autentification -->
+      <div class="form-section">
+        <div class="forms ch-completed">
+          <h3 class="form-title ch-completed">
+            <span>1</span>
+            Autentificare 
+            <a href="#orderAuth" class="edit"> 
+              <i class="far fa-edit"></i>
+            </a>
+          </h3>
+          <form>
+            <ul id="orderAuth" class="shipping-info ch-completed">
+            <li class="row">
+              <label>Username:</label>
+              <input autocomplete="username" type="text" name="username" id="username" required="true">
+            </li>
+            <li class="row">
+              <label>Password:</label>
+              <input autocomplete="current-password" type="password" name="password" id="password">
+            </li>
+            <li>
+              <input id="loginOrder" type="submit" value="Continuă" class="btn" data-id="orderInfo" />
+            </li>
+          </ul>
+          </form>
+          
+          <!-- Order Info -->
+          <h3 class="form-title">
+            <span>2</span>Detalii Comandă 
+            <a href="#orderInfo" class="edit">
+              <i class="far fa-edit"></i>
+            </a>
+          </h3>
+
+          <ul id="orderInfo" class="orderInfo ch-completed">
+            <li>
+              <label for="first Name" class="active">Nume</label>
+              <input type="text" name="firstName" id="firstName"/>
+            </li>
+            <li>
+              <label for="Last Name">Prenume</label>
+              <input type="text" name="lastName" id="lastName" />
+            </li>
+            <li>
+              <label for="Company">Companie</label>
+              <input type="text" class="optional" name="company" id="company" />
+            </li>
+            <li>
+              <label for="Delivery Adress">Adresă livrare:</label>
+              <input type="text" name="delivery" id="deliveryAdress" />
+            </li>
+            <li>
+              <label for="Billing Adress">Adresă facturare:</label>
+              <input type="text" name="billing" id="billingAdress"/>
+            </li>
+            <li>
+              <label for="Country">Țară</label>
+              <input type="text" name="country" id="country" />
+            </li>
+            <li>
+              <label for="City">Oraș</label>
+              <input type="text" name="city" id="city" />
+            </li>
+            <li>
+              <label for="State">Județ</label>
+              <input type="text" name="state" id="state" />
+            </li>
+            <li>
+              <label for="Zip Code">Cod Poștal</label>
+              <input type="text" class="optional" name="code" id="zipCode"/>
+            </li>
+            <li>
+              <label for="Phone Number">Număr de telefon</label>
+              <input type="text" name="phone" id="phoneNumber"/>
+            </li>
+             <li>
+                <p id="auth"></p>
+            </li>
+            <li>
+              <input id="sendOrder" type="submit" value="Finalizare comandă"/>
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- Summary -->
+        <div  class="receipt">
+          <h2>Sumar Comandă</h2>
+          <ul id="receiptOrder" class="ch-wrap ch-completed "></ul>
+          <ul id="subtotalOrder"class="subtotal ch-completed"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart -->
+  <section id="cartSection"></section>
+
+  <!-- Footer Section -->
+  <footer id = "footerSection"></footer>
+
+
+  <!--Jquery Script-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!--My Script-->
+  <script type="text/javascript" src="http://localhost:4002/code/importHTML.js"></script>
+  <script type="text/javascript" src="http://localhost:4002/code/checkout.js"></script>
+  <script type="text/javascript" src="http://localhost:4002/code/login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login OrzacDesign</title>
+
+	<!--Font Style Stylesheet-->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+
+	<!--My Stylesheet-->
+	<link rel="stylesheet" type="text/css" href="http://localhost:4002/css/main.css">
+	<link rel="stylesheet" type="text/css" href="http://localhost:4002/css/login.css">
+	
+</head>
+<body>
+
+	<!-- Header Section-->
+	<header class="product-page-header">	
+		<!--Navigation bar-->
+		<div id="navbarSection"></div>
+	</header> <!--End Header Section-->
+
+	<!-- Login Section-->
+	<div class="login"> 
+
+		<h1>Intră în cont</h1>
+		<form>
+			<div class="row">
+				<input type="text" name="username" id="username" placeholder="Username">
+			</div>
+
+			<div class="row">
+				<input type="password" name="password" id="password" placeholder="Password">	
+			</div>	
+		</form>
+		
+		<p class="here not-member" id="messageErr"></p>
+		
+		<div class="row">
+			<button class="btn-login" id="login">LOGIN</button>
+		</div>
+
+		<div class="here not-member">Nu ai cont? 
+			<a class="create-account highlighted" href="/signup"> Crează un cont acum </a>
+		</div>
+
+	</div><!-- End Section-->
+
+	<!-- Cart -->
+	<section id="cartSection"></section>
+
+
+	<!--Jquery Script-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!--My Script-->
+	<script type="text/javascript" src="http://localhost:4002/code/importHTML.js"></script>	
+	<script type="text/javascript" src="http://localhost:4002/code/login.js"></script>	
+
+</body>
+</html>

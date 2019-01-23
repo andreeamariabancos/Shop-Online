@@ -1,0 +1,232 @@
+@import url("variables.css");
+
+.block-note {
+    margin-bottom: 50px;
+    font-size: 15px;
+}
+
+@media (min-width: 1200px){
+	.container {
+		max-width: 1140px;
+	}
+}
+
+.lead {
+    font-size: 15px;
+}
+
+.featurette-heading {
+    font-size: 1.75rem;
+}
+
+.text-muted {
+    color: var(--orange)!important;
+}
+
+.title-underline {
+  display: inline;
+  font-size: 38px;
+  margin-bottom: 15px;
+  padding-bottom: 9px;
+  border-bottom: 3px solid transparent;
+  border-image: linear-gradient(to right, #FF851B 0%, #121214 89%);
+  border-image-slice: 1;
+  font-family: Quicksand;
+}
+
+.under-title {
+  margin-top: 40px;
+}
+
+.site-header .wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: auto;
+  display: flex;
+  align-items: baseline;
+}
+
+
+.wrap {
+  max-width: 1075px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wide-wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.center {
+  text-align: center;
+}
+
+.parallax-section {
+  width: 100%;
+  height: 750px;
+  background-attachment: fixed;
+}
+
+/**** Location Section ****/
+
+.section-location {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-bottom: 50px;
+  margin-top: 50px;
+}
+
+.section-location img {
+  height: 562px;
+}
+
+.locations {
+  padding: 0;
+  margin-top: 60px;
+}
+
+.locations li {
+  display: inline-block;
+  font-weight: 400;
+  margin-right: 50px;
+  line-height: 1.1;
+}
+
+.locations li span {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+
+/**** Team Section ****/
+
+.parallax-section.team-section {
+  background-image: url("../img/index/staircase.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.team-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.team-section .parallax-text {
+  width: 650px;
+  text-align: center;
+}
+
+.team-section .locations li {
+  margin-right: 0;
+}
+
+.team-section .locations li .fadein-text-city {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/**** More Section ****/
+
+.more-section {
+  padding: 125px 0 80px;
+  overflow-y: auto;
+}
+
+.more-section .under-title {
+  max-width: 425px;
+}
+
+.fa-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 575px;
+  position: relative;
+}
+
+#fa1 img {
+  height: 590px;
+}
+
+#fa2 img {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  height: auto;
+}
+
+#fa2 .fa-text {
+  float: right;
+}
+
+#fa3 img {
+  position: relative;
+  float: right;
+  height: 535px;
+  margin-right: 40px;
+}
+
+#fa3 .fa-text {
+  margin-left: 30px;
+}
+
+/**** Last Section ****/
+
+.parallax-section.last-section {
+  background-image: url("../img/index/clients.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.last-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.last-section .parallax-text {
+  text-align: center;
+}
+
+
+/*--- Column Classes ---*/
+
+.one-half,
+.three-sixths,
+.two-fourths {
+  width: 48.717948717948715%;
+}
+
+.one-third,
+.two-sixths {
+  width: 31.623931623931625%;
+}
+
+.four-sixths,
+.two-thirds {
+  width: 65.81196581196582%;
+}
+
+.one-fourth {
+  width: 23.076923076923077%;
+}
+
+.three-fourths {
+  width: 74.35897435897436%;
+}
+
+.one-sixth {
+  width: 14.52991452991453%;
+}
+
+.five-sixths {
+  width: 82.90598290598291%;
+}
+
