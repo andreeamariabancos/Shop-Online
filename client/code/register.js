@@ -5,13 +5,30 @@ $(function() {
 	var email;
 	var username;
 	var password;
+	var serverDate;
 	var connected = localStorage.getItem('user');
 
 	init();
 
 	function init() {
-		displayUserName();
+		displayUserIsConected();
+		requestUserMatch();
 	}
+
+	/**
+	 * User registration event
+	*/
+	$("#register").on("click", function() {
+		readValues();
+		console.log('server', serverDate)
+		console.log('email', email)
+		if (serverDate == email ) {
+			$("#messageErr").text('Sunteți înregistrat cu acest email');
+		} else if (validateValues()) {
+			addUser();	
+		}
+	});
+
 
 	/**
 	 * User disconnection
@@ -24,7 +41,7 @@ $(function() {
 	/**
 	 * Displaying the user name saved in localstorage
 	*/
-	function displayUserName() {
+	function displayUserIsConected() {
 
 		if (!connected) {
 			console.log("nu ai nimic stocat");
@@ -76,25 +93,30 @@ $(function() {
 		} else if (!surname || !surname.length) {
 
 			$("#surname").focus();
+			$("#name").css('border', 'none');
 			$("#surname").css('border', '1px solid rgb(210, 20, 20)');
 
 		} else if (!email || !email.length) {
 
 			$("#email").focus();
+			$("#surname").css('border', 'none');
 			$("#email").css('border', '1px solid rgb(210, 20, 20)');
 
 		} else if (!username || !username.length) {
+
 			$("#username").focus();
+			$("#email").css('border', 'none');
 			$("#username").css('border', '1px solid rgb(210, 20, 20)');
 
 		} else if (!password || !password.length) {
 
 			$("#password").focus();
+			$("#username").css('border', 'none');
 			$("#password").css('border', '1px solid rgb(210, 20, 20)');
+
 		}
-
+		
 		return name && surname && email && username && password && name.length && surname.length && email.length && username.length && password.length;
-
 	}
 
 	/**
@@ -108,22 +130,6 @@ $(function() {
 			window.location.href = '/';
 		}
 	}	
-
-
-	/**
-	 * User registration event
-	*/
-	$("#register").on("click", function() {
-		readValues();
-
-		if (validateValues()) {
-			addUser();	
-		} else {
-			console.log('validare pentru cont existent')
-			$("#messageErr").text('Sunte-ți înregistrat deja cu acest cont');
-		}
-
-	});
 
 	/**
 	 * User logout function
@@ -146,6 +152,32 @@ $(function() {
             </li>
           </ul>`);
 		
+	}
+
+
+
+	/**
+	 * Request login data for password/username matching
+	*/
+
+    function requestUserMatch() {
+			
+			$.ajax({
+				type: 'GET',
+				url: '/api/users',
+				contentType:"application/json",
+				success: successDataUser
+			});
+	} 
+
+	function successDataUser(match) {
+		if(match) {
+			console.log('username, passs server', match)
+			for ( var i = 0; i < match.length; i++) {
+				serverDate = match[i].email;
+				console.log('for', serverDate)
+			}
+		}	
 	}
 
 });

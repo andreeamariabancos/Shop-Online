@@ -101,6 +101,10 @@ $(document).ready(function() {
       <li class="totalRow final">
         <span class="label">Total</span>
         <span class="value" id="TVATotal"></span>
+      </li>
+      <li class="totalRow">
+        <span class="label">Modalitate plata</span>
+        <span>Ramburs</span>
       </li>`)
   } 
   
@@ -156,7 +160,7 @@ $(document).ready(function() {
    function handleSuccess(data) {
     console.log(data)
     if (data) { 
-      console.log('Detalii de livrare trimise')
+      alert ('Comanda a fost efectuata, mail confirmare')
     } 
   } 
 
@@ -225,35 +229,42 @@ $(document).ready(function() {
     } else if (!lastName || !lastName.length) {
 
       $("#lastName").focus();
+      $("#firstName").css('border', '1px solid #D0D0D0');
       $("#lastName").css('border', '1px solid rgb(210, 20, 20)');
 
     } else if (!deliveryAdress || !deliveryAdress.length) {
 
       $( "#deliveryAdress").focus();
+      $("#lastName").css('border', '1px solid #D0D0D0');
       $("#deliveryAdress").css('border', '1px solid rgb(210, 20, 20)');
 
     } else if (!billingAdress || !billingAdress.length) {
 
       $("#billingAdress").focus();
+      $("#deliveryAdress").css('border', '1px solid #D0D0D0');
       $("#billingAdress").css('border', '1px solid rgb(210, 20, 20)');
 
     } else if (!country || !country.length) {
       $("#county").focus();
+      $("#billingAdress").css('border', '1px solid #D0D0D0');
       $("#country").css('border', '1px solid rgb(210, 20, 20)');
 
     } else if (!state || !state.length) {
 
       $("#state").focus();
+      $("#country").css('border', '1px solid #D0D0D0');
       $("#state").css('border', '1px solid rgb(210, 20, 20)');
 
     } else if (!city || !city.length) {
 
       $("#city").focus();
+      $("#state").css('border', '1px solid #D0D0D0');
       $("#city").css('border', '1px solid rgb(210, 20, 20)');
 
     } else if (!phoneNumber || !phoneNumber.length) {
 
       $("#phoneNumber").focus();
+      $("#city").css('border', '1px solid #D0D0D0');
       $("#phoneNumber").css('border', '1px solid rgb(210, 20, 20)');
     } 
 
@@ -308,10 +319,9 @@ $(document).ready(function() {
      readOrderInput();
      collectShoppingCart();
 
-    if (validationFields()) {
+    if (validationFields() && validatePhone()) {
       addOrder();
-      saveCart(); 
-      console.log('Datele din cos si comanda salvate in baza de date')  
+      saveCart();  
     } else {
       console.log("The order can't be operated")
     }
@@ -343,5 +353,30 @@ $(document).ready(function() {
 
     } 
   } 
+
+     
+  function validatePhone(phoneNumber) {
+    var number =  $("#phoneNumber").val();
+    var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+    if (filter.test(number)) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+
+  $('#phoneNumber').blur(function(e) {
+    if (validatePhone('phoneNumber')) {
+      $('#phoneStatus').html('✓');
+      $('#phoneStatus').css('color', 'green');
+    }
+    else {
+      $('#phoneStatus').html('✗');
+      $('#phoneStatus').css('color', 'red');
+    }
+  });
+
 
  });

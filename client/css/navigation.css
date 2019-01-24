@@ -74,14 +74,13 @@
   display: none;
   position: absolute;
   background-color: #f1f1f13b;
-  min-width: 160px;
+  min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.88);
   z-index: 1;
 }
 
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
@@ -194,8 +193,8 @@ i.fa.fa-user {
     text-transform: uppercase;
     font-family: Quicksand;
     font-weight: 500;
-    font-size: 20px;
-    margin-right: 50px;
+    font-size: 18px;
+    margin-right: 30px;
   }
 
   .nav a:hover {

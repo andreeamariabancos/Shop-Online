@@ -42,6 +42,7 @@ input {
     text-shadow: 1px 1px 1px var(--blackLight);
     border: 1px solid var(--borderInput);
     border-radius: 4px;
+    transition: all 0.25s linear;
 }
 
 input:focus { 

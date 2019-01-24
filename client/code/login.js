@@ -2,6 +2,12 @@ $(function() {
 
 	var username;
 	var password;
+	var serverDate;
+
+	init();
+	function init() {
+		requestUserDate();
+	}
 
 	/**
 	 * User login event
@@ -12,20 +18,17 @@ $(function() {
 
 		if (validateValues()) {
 			login();
-			window.location = '/';	
-		} else {
-			console.log('validare pentru parola sau user gresit')
-			$("#messageErr").text('Nume utilizator sau parolă gresită');
-		}			
+		}	
 	});
-
+ 
 
 	/**
-	 * User login in cjecjout page
+	 * User login in chechout page
 	*/
 
 	$("#loginOrder").on("click", function() {
     readValues();
+
 
     if (validateValues()) {
       login();
@@ -51,15 +54,20 @@ $(function() {
 
 		if (!username || !username.length) {
 			
-			console.log('No username specified');
 			$("#username").focus();
 			$("#username").css('border', '1px solid rgb(210, 20, 20)');
 
 		} else if (!password || !password.length) {
 
-			console.log('No password specified');
 			$("#password").focus();
+			$("#username").css('border', 'none');
 			$("#password").css('border', '1px solid rgb(210, 20, 20)');
+
+		} else if (serverDate != username || password) {
+
+			$("#username,#password").css('border', 'none');
+			$("#messageErr").text('Nume utilizator sau parolă gresită');
+
 		}
 
 		return username && password && username.length && password.length;
@@ -88,9 +96,35 @@ $(function() {
 	function handleSuccess(data) {
 
 		if (data) {
-			window.localStorage.setItem('user', JSON.stringify(data));		
+			window.localStorage.setItem('user', JSON.stringify(data));
+			window.location = '/';		
 			alert('Welcome in your account');
 		}
 	}	
+
+
+	/**
+	 * Request login data for password/username matching
+	*/
+
+    function requestUserDate() {
+			
+			$.ajax({
+				type: 'GET',
+				url: '/api/users',
+				contentType:"application/json",
+				success: successData
+			});
+	} 
+
+	function successData(match) {
+		if(match) {
+			console.log('username, passs server', match)
+			for ( var i = 0; i < match.length; i++) {
+				serverDate = match[i].username;
+				console.log('for', serverDate)
+			}
+		}	
+	}
 
 });

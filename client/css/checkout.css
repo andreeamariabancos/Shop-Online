@@ -11,6 +11,9 @@
   background-attachment: fixed;
 }
 
+.validate {
+  position: absolute;
+}
 
 .checkout-container {
   height: 1080px;
@@ -143,10 +146,6 @@
   color: #2e2e2e;
   border: 1px solid #D0D0D0;
   border-radius: 5px;
-  -webkit-transition: all 0.25s linear;
-  -moz-transition: all 0.25s linear;
-  -ms-transition: all 0.25s linear;
-  -o-transition: all 0.25s linear;
   transition: all 0.25s linear;
 }
 .forms ul input[type="text"].optional {
