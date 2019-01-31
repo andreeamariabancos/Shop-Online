@@ -4,6 +4,10 @@ var BodyParser = require("body-parser"); //npm intall body-parser
 var Mongoose = require("mongoose");//npm intall mongose
 var BlueBird = require("bluebird");//npm intall bluebird
 
+var crypto = require('crypto');
+var data = "Merge criptarea cu structura asta"
+console.log('cripteaza ', crypto.createHash('md5').update(data).digest('hex'))
+
 var app = Express();
 
 Mongoose.Promise = BlueBird;

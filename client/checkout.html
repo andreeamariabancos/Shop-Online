@@ -9,6 +9,9 @@
   <!--Font Style Stylesheet-->
   <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 
+  <!-- START HERE -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+
   <!--My Stylesheet-->
   <link rel="stylesheet" type="text/css" href="http://localhost:4002/css/main.css">
   <link rel="stylesheet" type="text/css" href="http://localhost:4002/css/checkout.css">
@@ -43,18 +46,18 @@
           </h3>
           <form>
             <ul id="orderAuth" class="shipping-info ch-completed">
-            <li class="row">
-              <label>Username:</label>
-              <input autocomplete="username" type="text" name="username" id="username" required="true">
-            </li>
-            <li class="row">
-              <label>Password:</label>
-              <input autocomplete="current-password" type="password" name="password" id="password">
-            </li>
-            <li>
-              <input id="loginOrder" type="submit" value="Continuă" class="btn" data-id="orderInfo" />
-            </li>
-          </ul>
+              <li class="row">
+                <label>Username:</label>
+                <input autocomplete="username" type="text" name="username" id="username" required="true">
+              </li>
+              <li class="row">
+                <label>Password:</label>
+                <input autocomplete="current-password" type="password" name="password" id="password">
+              </li>
+              <li>
+                <input id="loginOrder" type="submit" value="Continuă" class="btn" data-id="orderInfo" />
+              </li>
+            </ul>
           </form>
           
           <!-- Order Info -->
@@ -65,57 +68,69 @@
             </a>
           </h3>
 
+          <div style="display:none; padding: 20px;" id="thankyou_message">
+            <p><em>Multumim</em> pentru comanda dumneavoastra!
+            Revenim cu datele comenzii intr-un email !</p>
+          </div>
+  
+          <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="bancosandreea@gmail.com"
+          action="https://script.google.com/macros/s/AKfycbw7b89n-1WZmEr2tqI6LSb01BwUMBhzjcszGk5IoA/exec">
           <ul id="orderInfo" class="orderInfo ch-completed">
             <li>
               <label for="first Name" class="active">Nume</label>
-              <input type="text" name="firstName" id="firstName"/>
+              <input type="text" name="Nume" id="firstName"/>
             </li>
             <li>
               <label for="Last Name">Prenume</label>
-              <input type="text" name="lastName" id="lastName" />
+              <input type="text" name="Prenume"/>
             </li>
             <li>
               <label for="Company">Companie</label>
-              <input type="text" class="optional" name="company" id="company" />
+              <input type="text" class="optional" name="Companie" id="company" />
             </li>
             <li>
               <label for="Delivery Adress">Adresă livrare:</label>
-              <input type="text" name="delivery" id="deliveryAdress" />
+              <input type="text" name="Adresă livrare" id="deliveryAdress" />
             </li>
             <li>
               <label for="Billing Adress">Adresă facturare:</label>
-              <input type="text" name="billing" id="billingAdress"/>
+              <input type="text" name="Adresă facturare" id="billingAdress"/>
             </li>
             <li>
               <label for="Country">Țară</label>
-              <input type="text" name="country" id="country" />
+              <input type="text" name="Țară" id="country" />
             </li>
             <li>
               <label for="City">Oraș</label>
-              <input type="text" name="city" id="city" />
+              <input type="text" name="Oraș" id="city" />
             </li>
             <li>
               <label for="State">Județ</label>
-              <input type="text" name="state" id="state" />
+              <input type="text" name="Județ" id="state" />
             </li>
             <li>
               <label for="Zip Code">Cod Poștal</label>
-              <input type="text" class="optional" name="code" id="zipCode"/>
+              <input type="text" class="optional" name="Cod Poștal" id="zipCode"/>
             </li>
             <li>
               <label for="Phone Number">Număr de telefon</label>
-              <input type="text" name="phone" id="phoneNumber"/><span class="validate" id="phoneStatus"></span>
-
-            </li>
-             <li>
-                <p id="auth"></p>
+              <input type="text" name="Telefon" id="phoneNumber"/><span class="validate" id="phoneStatus"></span>
             </li>
             <li>
-              <input id="sendOrder" type="submit" value="Finalizare comandă"/>
+              <label for="email">Recuperare date</label>
+              <input id="email" name="email" type="email" value=""
+              required placeholder="nume@email.com"/>
+              <span id="email-invalid" style="display:none">
+              Trebuie sa introduci un mail valid</span>
             </li>
-          </ul>
+            <li>
+              <p id="auth"></p>
+            </li>
+            <li>
+              <input class="button-success pure-button button-xlarge" id="sendOrder" type="submit" value="Finalizare comandă"/>
+            </li>
+          </ul> 
         </div>
-
 
         <!-- Summary -->
         <div  class="receipt">
@@ -127,20 +142,28 @@
     </div>
   </div>
 
-  <!-- Cart -->
-  <section id="cartSection"></section>
 
-  <!-- Footer Section -->
-  <footer id = "footerSection"></footer>
+</form>
 
 
-  <!--Jquery Script-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  <!--My Script-->
-  <script type="text/javascript" src="http://localhost:4002/code/importHTML.js"></script>
-  <script type="text/javascript" src="http://localhost:4002/code/checkout.js"></script>
-  <script type="text/javascript" src="http://localhost:4002/code/login.js"></script>
+
+<!-- Cart -->
+<section id="cartSection"></section>
+
+<!-- Footer Section -->
+<footer id = "footerSection"></footer>
+
+
+<!--Jquery Script-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--My Script-->
+<script type="text/javascript" src="http://localhost:4002/code/importHTML.js"></script>
+<script type="text/javascript" src="http://localhost:4002/code/checkout.js"></script>
+<script type="text/javascript" src="http://localhost:4002/code/login.js"></script>
+<script data-cfasync="false" type="text/javascript"
+src="http://localhost:4002/code/form-submission-handler.js"></script>
 
 </body>
 </html>

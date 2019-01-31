@@ -17,9 +17,9 @@ module.exports = function(Mongoose) {
 	this.login = function(data, success, fail) {
 		const username = data.username;
 		const password = data.password;
-
 		User.findOne({ username, password }, function(error, result) {
 			error ? fail(error) : success(result);
 		});
 	}
+
 }

@@ -139,8 +139,8 @@
   float: right;
   color: #676767;
 }
-.forms ul input[type="text"], input[type="password"] {
-  width: 100%;
+.forms ul input[type="text"], input[type="password"] , input[type="email"]{
+  width: 100%!important;
   padding: .5em;
   font-size: .85em;
   color: #2e2e2e;

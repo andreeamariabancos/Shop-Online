@@ -310,7 +310,6 @@ $(document).ready(function() {
 
   }
 
-
   /**
    *  Event initiated when placing the order
   */
@@ -356,8 +355,8 @@ $(document).ready(function() {
 
      
   function validatePhone(phoneNumber) {
-    var number =  $("#phoneNumber").val();
-    var filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
+    let number =  $("#phoneNumber").val();
+    let filter = /^((\+[1-9]{1,4}[ \-]*)|(\([0-9]{2,3}\)[ \-]*)|([0-9]{2,4})[ \-]*)*?[0-9]{3,4}?[ \-]*[0-9]{3,4}?$/;
     if (filter.test(number)) {
       return true;
     }
@@ -371,12 +370,17 @@ $(document).ready(function() {
     if (validatePhone('phoneNumber')) {
       $('#phoneStatus').html('✓');
       $('#phoneStatus').css('color', 'green');
+      $('#phoneStatus').css('position','absolute');
+      $('#phoneStatus').css('right','20px');
+      $('#phoneStatus').css('top','26px');
     }
     else {
       $('#phoneStatus').html('✗');
       $('#phoneStatus').css('color', 'red');
+      $('#phoneStatus').css('position','absolute');
+      $('#phoneStatus').css('right','20px');
+      $('#phoneStatus').css('top','26px');
     }
   });
 
-
- });
+});
